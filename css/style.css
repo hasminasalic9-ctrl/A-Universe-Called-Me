@@ -1,0 +1,164 @@
+
+/* =================================
+   A UNIVERSE CALLED ME
+   Initial Day Sky Theme
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf5ff;
+    color: #243b55;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #245b91;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #426789;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d4a64a;
+}
+
+/* HOME */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(
+        180deg,
+        #c8e6ff,
+        #edf7ff,
+        #ffffff
+    );
+}
+
+.eyebrow {
+    color: #5487b4;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 68px);
+    color: #245b91;
+    margin-bottom: 15px;
+}
+
+.tagline {
+    font-size: 19px;
+    font-style: italic;
+    color: #547b9e;
+    margin-bottom: 22px;
+}
+
+.introduction {
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.explore-link {
+    display: inline-block;
+    background-color: #397db6;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.explore-link:hover {
+    background-color: #245b91;
+}
+
+/* CONTENT SECTIONS */
+
+section:not(.hero) {
+    padding: 85px 10%;
+    text-align: center;
+}
+
+section h2 {
+    color: #245b91;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+section p {
+    max-width: 650px;
+    margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #d8ebfa;
+    color: #547b9e;
+    font-size: 14px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    section:not(.hero) {
+        padding: 60px 7%;
+    }
+
+}
