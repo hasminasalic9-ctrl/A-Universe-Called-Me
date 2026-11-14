@@ -1,8 +1,10 @@
 
-/* =================================
+/* =========================================
    A UNIVERSE CALLED ME
-   DAY SKY & NIGHT UNIVERSE
-================================= */
+   COMPLETE DAY SKY & NIGHT UNIVERSE THEME
+========================================= */
+
+/* GENERAL SETTINGS */
 
 * {
     margin: 0;
@@ -22,7 +24,9 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* HEADER */
+/* =========================================
+   HEADER
+========================================= */
 
 header {
     display: flex;
@@ -55,7 +59,9 @@ nav a:hover {
     color: #d4a64a;
 }
 
-/* THEME BUTTON */
+/* =========================================
+   THEME BUTTON
+========================================= */
 
 #theme-toggle {
     padding: 8px 14px;
@@ -64,9 +70,12 @@ nav a:hover {
     border: 1px solid #aac9e5;
     background-color: #ffffff;
     color: #245b91;
+    transition: all 0.4s ease;
 }
 
-/* HOME */
+/* =========================================
+   DAY SKY — HOME SECTION
+========================================= */
 
 .hero {
     min-height: 85vh;
@@ -76,12 +85,14 @@ nav a:hover {
     align-items: center;
     text-align: center;
     padding: 60px 20px;
+
     background: linear-gradient(
         180deg,
         #c8e6ff,
         #edf7ff,
         #ffffff
     );
+
     transition: background 0.5s ease;
 }
 
@@ -110,6 +121,8 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
+/* EXPLORE BUTTON */
+
 .explore-link {
     display: inline-block;
     background-color: #397db6;
@@ -124,7 +137,9 @@ nav a:hover {
     background-color: #245b91;
 }
 
-/* CONTENT SECTIONS */
+/* =========================================
+   CONTENT SECTIONS
+========================================= */
 
 section:not(.hero) {
     padding: 85px 10%;
@@ -142,7 +157,9 @@ section p {
     margin: auto;
 }
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
     text-align: center;
@@ -153,14 +170,16 @@ footer {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* =================================
+/* =========================================
    NIGHT UNIVERSE THEME
-================================= */
+========================================= */
 
 body.night-theme {
     background-color: #081426;
     color: #e6f0ff;
 }
+
+/* NIGHT HEADER */
 
 body.night-theme header {
     background-color: #0d1f38;
@@ -179,13 +198,23 @@ body.night-theme nav a:hover {
     color: #ffd98a;
 }
 
+/* NIGHT BUTTON */
+
 body.night-theme #theme-toggle {
     background-color: #183656;
     color: #ffe2a3;
     border: 1px solid #49698c;
 }
 
+/* =========================================
+   NIGHT UNIVERSE — STAR-LIT SKY
+========================================= */
+
 body.night-theme .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
     background: linear-gradient(
         180deg,
         #10233d,
@@ -193,6 +222,56 @@ body.night-theme .hero {
         #081426
     );
 }
+
+/* STARS */
+
+body.night-theme .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(2px 2px at 5% 15%, #ffffff 99%, transparent 100%),
+        radial-gradient(2px 2px at 15% 65%, #d5e8ff 99%, transparent 100%),
+        radial-gradient(3px 3px at 25% 35%, #ffffff 99%, transparent 100%),
+        radial-gradient(2px 2px at 35% 85%, #c5dcff 99%, transparent 100%),
+        radial-gradient(2px 2px at 45% 20%, #ffffff 99%, transparent 100%),
+        radial-gradient(3px 3px at 55% 65%, #ffffff 99%, transparent 100%),
+        radial-gradient(2px 2px at 65% 40%, #d5e8ff 99%, transparent 100%),
+        radial-gradient(2px 2px at 75% 15%, #ffffff 99%, transparent 100%),
+        radial-gradient(3px 3px at 85% 75%, #ffffff 99%, transparent 100%),
+        radial-gradient(2px 2px at 95% 45%, #c5dcff 99%, transparent 100%);
+
+    background-size: 350px 350px;
+    background-repeat: repeat;
+
+    animation: stars-twinkle 4s ease-in-out infinite alternate;
+}
+
+/* KEEP TEXT ABOVE THE STARS */
+
+body.night-theme .hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* TWINKLING STARS ANIMATION */
+
+@keyframes stars-twinkle {
+    from {
+        opacity: 0.35;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   NIGHT UNIVERSE — TEXT AND CONTENT
+========================================= */
 
 body.night-theme .eyebrow {
     color: #9ccaff;
@@ -220,6 +299,8 @@ body.night-theme section p {
     color: #c5d5e8;
 }
 
+/* NIGHT EXPLORE BUTTON */
+
 body.night-theme .explore-link {
     background-color: #315f91;
     color: #ffffff;
@@ -229,12 +310,16 @@ body.night-theme .explore-link:hover {
     background-color: #497fb5;
 }
 
+/* NIGHT FOOTER */
+
 body.night-theme footer {
     background-color: #06101f;
     color: #b8cbe3;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
 
 @media (max-width: 700px) {
 
@@ -253,52 +338,8 @@ body.night-theme footer {
         font-size: 13px;
     }
 
-/* =================================
-   NIGHT UNIVERSE — STAR EFFECTS
-================================= */
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-
-    background-image:
-        radial-gradient(2px 2px at 10% 20%, white 99%, transparent),
-        radial-gradient(2px 2px at 30% 70%, #d5e8ff 99%, transparent),
-        radial-gradient(3px 3px at 50% 30%, white 99%, transparent),
-        radial-gradient(2px 2px at 70% 80%, white 99%, transparent),
-        radial-gradient(2px 2px at 90% 15%, #c5dcff 99%, transparent),
-        radial-gradient(2px 2px at 20% 90%, white 99%, transparent),
-        radial-gradient(3px 3px at 85% 55%, white 99%, transparent),
-        radial-gradient(2px 2px at 45% 85%, #d5e8ff 99%, transparent);
-
-    background-size: 350px 350px;
-}
-
-body.night-theme::before {
-    opacity: 1;
-    animation: stars-twinkle 4s ease-in-out infinite alternate;
-}
-
-body.night-theme > * {
-    position: relative;
-    z-index: 1;
-}
-
-@keyframes stars-twinkle {
-    from {
-        opacity: 0.45;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
     section:not(.hero) {
         padding: 60px 7%;
     }
+
 }
