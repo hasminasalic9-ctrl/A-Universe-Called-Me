@@ -158,6 +158,66 @@ footer {
     }
 
     section:not(.hero) {
+
+       
+/* =================================
+   NIGHT UNIVERSE THEME
+================================= */
+
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.night-theme {
+    background-color: #081426;
+    color: #E6F0FF;
+}
+
+body.night-theme header {
+    background-color: #0D1F38;
+    border-bottom: 1px solid #243B5A;
+}
+
+body.night-theme nav a {
+    color: #B8D9FF;
+}
+
+body.night-theme nav a:hover {
+    color: #FFD98A;
+}
+
+body.night-theme section {
+    background-color: #10233D;
+    color: #E6F0FF;
+    border-color: #263E5C;
+}
+
+body.night-theme h1,
+body.night-theme h2,
+body.night-theme h3 {
+    color: #D5E8FF;
+}
+
+body.night-theme p {
+    color: #C5D5E8;
+}
+
+body.night-theme footer {
+    background-color: #06101F;
+    color: #B8CBE3;
+}
+
+body.night-theme a {
+    color: #9CCBFF;
+}
+
+body.night-theme #theme-toggle {
+    background-color: #183656;
+    color: #FFE2A3;
+    border: 1px solid #49698C;
+    cursor: pointer;
+}
+
         padding: 60px 7%;
     }
 
