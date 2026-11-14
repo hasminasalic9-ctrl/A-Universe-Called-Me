@@ -1,7 +1,7 @@
 
 /* =================================
    A UNIVERSE CALLED ME
-   Initial Day Sky Theme
+   DAY SKY & NIGHT UNIVERSE
 ================================= */
 
 * {
@@ -19,6 +19,7 @@ body {
     background-color: #eaf5ff;
     color: #243b55;
     line-height: 1.7;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* HEADER */
@@ -29,6 +30,7 @@ header {
     align-items: center;
     padding: 22px 8%;
     background-color: #ffffff;
+    transition: background-color 0.5s ease;
 }
 
 .logo {
@@ -53,6 +55,17 @@ nav a:hover {
     color: #d4a64a;
 }
 
+/* THEME BUTTON */
+
+#theme-toggle {
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid #aac9e5;
+    background-color: #ffffff;
+    color: #245b91;
+}
+
 /* HOME */
 
 .hero {
@@ -69,6 +82,7 @@ nav a:hover {
         #edf7ff,
         #ffffff
     );
+    transition: background 0.5s ease;
 }
 
 .eyebrow {
@@ -136,6 +150,88 @@ footer {
     background-color: #d8ebfa;
     color: #547b9e;
     font-size: 14px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* =================================
+   NIGHT UNIVERSE THEME
+================================= */
+
+body.night-theme {
+    background-color: #081426;
+    color: #e6f0ff;
+}
+
+body.night-theme header {
+    background-color: #0d1f38;
+    border-bottom: 1px solid #243b5a;
+}
+
+body.night-theme .logo {
+    color: #d5e8ff;
+}
+
+body.night-theme nav a {
+    color: #b8d9ff;
+}
+
+body.night-theme nav a:hover {
+    color: #ffd98a;
+}
+
+body.night-theme #theme-toggle {
+    background-color: #183656;
+    color: #ffe2a3;
+    border: 1px solid #49698c;
+}
+
+body.night-theme .hero {
+    background: linear-gradient(
+        180deg,
+        #10233d,
+        #0b192d,
+        #081426
+    );
+}
+
+body.night-theme .eyebrow {
+    color: #9ccaff;
+}
+
+body.night-theme .hero h1,
+body.night-theme section h2 {
+    color: #d5e8ff;
+}
+
+body.night-theme .tagline {
+    color: #b8cbe3;
+}
+
+body.night-theme .introduction {
+    color: #c5d5e8;
+}
+
+body.night-theme section:not(.hero) {
+    background-color: #10233d;
+    color: #e6f0ff;
+}
+
+body.night-theme section p {
+    color: #c5d5e8;
+}
+
+body.night-theme .explore-link {
+    background-color: #315f91;
+    color: #ffffff;
+}
+
+body.night-theme .explore-link:hover {
+    background-color: #497fb5;
+}
+
+body.night-theme footer {
+    background-color: #06101f;
+    color: #b8cbe3;
 }
 
 /* MOBILE RESPONSIVENESS */
@@ -158,67 +254,6 @@ footer {
     }
 
     section:not(.hero) {
-
-       
-/* =================================
-   NIGHT UNIVERSE THEME
-================================= */
-
-body {
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-body.night-theme {
-    background-color: #081426;
-    color: #E6F0FF;
-}
-
-body.night-theme header {
-    background-color: #0D1F38;
-    border-bottom: 1px solid #243B5A;
-}
-
-body.night-theme nav a {
-    color: #B8D9FF;
-}
-
-body.night-theme nav a:hover {
-    color: #FFD98A;
-}
-
-body.night-theme section {
-    background-color: #10233D;
-    color: #E6F0FF;
-    border-color: #263E5C;
-}
-
-body.night-theme h1,
-body.night-theme h2,
-body.night-theme h3 {
-    color: #D5E8FF;
-}
-
-body.night-theme p {
-    color: #C5D5E8;
-}
-
-body.night-theme footer {
-    background-color: #06101F;
-    color: #B8CBE3;
-}
-
-body.night-theme a {
-    color: #9CCBFF;
-}
-
-body.night-theme #theme-toggle {
-    background-color: #183656;
-    color: #FFE2A3;
-    border: 1px solid #49698C;
-    cursor: pointer;
-}
-
         padding: 60px 7%;
     }
-
 }
